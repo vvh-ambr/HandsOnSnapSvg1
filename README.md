@@ -1,3 +1,3 @@
 # HandsOn SnapSvg 1
 
-# just an app to test Nap.svg and Meteor together
+# just an app to test Snap.svg and Meteor together
