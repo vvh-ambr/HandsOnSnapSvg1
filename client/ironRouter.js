@@ -24,7 +24,7 @@ Router.route('/write-new-article', function() {
 	this.render('NewArticle');
 });
 
-Router.route('/resume', function() {
+Router.route('/about', function() {
 	this.render('Resume');
 }, {
 	data: function() {

@@ -8,8 +8,7 @@
 		<ul>
 		<li><a href="/">H O M E</a></li>
 		<li><a href="/articles">A R T I C L E S</a></li>
-		<li><a href="/resume">A B O U T</a></li>
-		<!-- <li><pre><a href="/cheatsheets">C H E A T  S H E E T S  A P P</a></pre></li> -->
+		<li><a href="/about">A B O U T</a></li>
 	</ul>
 	</div>
 	</aside>
@@ -21,9 +20,11 @@
 <template name="Home">
 	<div class="content">
 		<h1>Greetings</h1>
-		<p>Welcome to my site. Here I upload things that I do. I like to write interesting <a class="anchor" href="/articles">articles</a> to share my opinion with community about the technology and web development field in particular. Also my <a class="anchor" href="/articles">Concepts Behind</a> rubric may be very handy to those who want to take a look at some of the hot topics on the technology area or those who want to learn it quickly and deeply by embracing the concepts behind it respectively. </p>
+		<p>Welcome to my site. Here I upload things that I do. </p> 
+		<p>I like to write interesting <a class="anchor" href="/articles">articles</a> to share my opinion with community about the technology and web development field in particular.</p>
+		<p>Also my <a class="anchor" href="/articles">Concepts Behind</a> rubric may be very handy to those who want to take a look at some of the hot topics on the technology area or those who want to learn it quickly and deeply by embracing the concepts behind it respectively. </p>
 		<h2>Status: </h2>
-		<p>I am currently looking for a participation in some awesome team, so you might want to check out my <a class="anchor" href="/resume">resume</a></p>
+		<p>I am currently looking for a participation in some awesome team, so you might want to check out my <a class="anchor" href="/about">resume</a></p>
 	</div>
 </template>
 
@@ -49,7 +50,10 @@
 	<div class="content">
 		<h2>{{label}}</h2>
 		<h3>{{date}}</h3>
-		<p>{{body}}</p>
+		<p>{{body.one}}</p>
+		<p>{{body.two}}</p>
+		<p>{{body.three}}</p>
+		<p>{{body.four}}</p>
 	</div>
 	{{/with}}
 </template>
@@ -58,24 +62,19 @@
 	<hr>
 	<br>
 	<form id="articlesUpdate">
-		<!-- <ul>
-			<li>Name: <input type="text" name="name"></li>
-			<li>Label: <input type="text" name="label"></li>
-			<li>X: <input type="text" name="x"></li>
-			<li>Y: <input type="text" name="y"></li>
-			<li>Rad: <input type="text" name="rad"></li>
-			<li><input type="submit"></li>
-		</ul> -->
+		Blank: <input type="text" name="">
 		Name: <input type="text" name="name1" required>
 		Label: <input type="text" name="label1">
 		X: <input type="text" name="x">
 		Y: <input type="text" name="y">
+		Blank: <input type="text" name="">
 		Rad: <input type="text" name="rad">
 		<input type="submit">
 	</form>
 	<hr>
 	<br>
 	<form id="articlesInsert">
+		Blank: <input type="text" name="">
 		Name: <input type="text" name="name2" required>
 		Date: <input type="text" name="date">
 		<input type="submit">
@@ -83,16 +82,32 @@
 	<hr>
 	<br>
 	<form id="docsInsert">
+		Blank: <input type="text" name="">
 		Label: <input type="text" name="label2" required>
 		Date: <input type="text" name="date">
-		Body: <textarea name="body" id="" cols="30" rows="10"></textarea>
+		Body: <textarea name="body1" id="" cols="30" rows="10"></textarea>
+		Blank: <input type="text" name="">
+		Body: <textarea name="body2" id="" cols="30" rows="10"></textarea>
+		Body: <textarea name="body3" id="" cols="30" rows="10"></textarea>
+		Body: <textarea name="body4" id="" cols="30" rows="10"></textarea>
+		<input type="submit">
+	</form>
+	<form id="deleteArt">
+		Blank: <input type="text" name="">
+		Name: <input type="text" name="thisName" required>
 		<input type="submit">
 	</form>
 </template>
 
 <template name="Resume">
 	<div class="content">
-		<h1>Curriculum vitae</h1>
+	<h1>Couple of words about me</h1>
+		<p>Hello, my name is Ivan, I'm from Russia and now I'm searching for opportunities to participate in a cool team and to make some great products.</p>
+		<p>I'm mostly position myself as front-end developer, but I'm eager to develop my skills as backend and full-stack developer too.</p>
+		<p>Web development was just a hobby for me for a couple of years, that was the time when I was doing many things, was trying myself in different areas, such as music, <a class="anchor" href="https://vk.com/doc22635400_391228091">drawing</a>, personal development.
+		<p>But now I decided to step further in web industry and really want to do great job with great people.</p>
+		<h1>Contact</h1>
+		<p>Feel free to send me a mail at <a class="anchor" href="#">vvh.ambr@gmail.com</a> if you want to reach me.</p>
 		
 	</div>
 </template>

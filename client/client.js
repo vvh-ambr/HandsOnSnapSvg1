@@ -36,13 +36,26 @@ Template.NewArticle.events({
 		e.preventDefault();
 		var valLabel = e.target.label2.value;
 		var valDate = e.target.date.value;
-		var valBody = e.target.body.value;
+		var bOne = e.target.body1.value;
+		var bTwo = e.target.body2.value;
+		var bThree = e.target.body3.value;
+		var bFour = e.target.body4.value;
 		var object = {
 			label: valLabel,
 			date: valDate,
-			body: valBody
+			body: {
+				one: bOne,
+				two: bTwo,
+				three: bThree,
+				four: bFour
+			}
 		}
 		Meteor.call('insertDoc', object);
+	},
+	'submit #deleteArt': function(e, t) {
+		e.preventDefault();
+		var thisName = e.target.thisName.value;
+		Meteor.call('delArt', thisName);
 	}
 });
 
