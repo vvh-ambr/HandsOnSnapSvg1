@@ -1,0 +1,122 @@
+<head>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<template name="AppLayout">
+	<aside class="aside">
+	<div class="navigation">
+		<ul>
+		<li><a href="/">H O M E</a></li>
+		<li><a href="/articles">A R T I C L E S</a></li>
+		<li><a href="/resume">A B O U T</a></li>
+		<!-- <li><pre><a href="/cheatsheets">C H E A T  S H E E T S  A P P</a></pre></li> -->
+	</ul>
+	</div>
+	</aside>
+	<div id="container">
+		{{> yield}}
+	</div>
+</template>
+
+<template name="Home">
+	<div class="content">
+		<h1>Greetings</h1>
+		<p>Welcome to my site. Here I upload things that I do. I like to write interesting <a class="anchor" href="/articles">articles</a> to share my opinion with community about the technology and web development field in particular. Also my <a class="anchor" href="/articles">Concepts Behind</a> rubric may be very handy to those who want to take a look at some of the hot topics on the technology area or those who want to learn it quickly and deeply by embracing the concepts behind it respectively. </p>
+		<h2>Status: </h2>
+		<p>I am currently looking for a participation in some awesome team, so you might want to check out my <a class="anchor" href="/resume">resume</a></p>
+	</div>
+</template>
+
+<template name="Articles">
+	{{#each Article}}
+		<div class="article">
+			<div class="wrap">
+				<a class="l" href="{{pathFor 'art.single'}}"><h1>{{name}}</h1></a>
+				<h2>rubric: Concepts Behind</h2>
+				<h3>{{date}}</h3>
+			</div>
+		</div>
+	{{/each}}
+</template>
+
+<template name="Article">
+	<svg id="svgEl"></svg>
+	{{> Document}}
+</template>
+
+<template name="Document">
+	{{#with Doc}}
+	<div class="content">
+		<h2>{{label}}</h2>
+		<h3>{{date}}</h3>
+		<p>{{body}}</p>
+	</div>
+	{{/with}}
+</template>
+
+<template name="NewArticle">
+	<hr>
+	<br>
+	<form id="articlesUpdate">
+		<!-- <ul>
+			<li>Name: <input type="text" name="name"></li>
+			<li>Label: <input type="text" name="label"></li>
+			<li>X: <input type="text" name="x"></li>
+			<li>Y: <input type="text" name="y"></li>
+			<li>Rad: <input type="text" name="rad"></li>
+			<li><input type="submit"></li>
+		</ul> -->
+		Name: <input type="text" name="name1" required>
+		Label: <input type="text" name="label1">
+		X: <input type="text" name="x">
+		Y: <input type="text" name="y">
+		Rad: <input type="text" name="rad">
+		<input type="submit">
+	</form>
+	<hr>
+	<br>
+	<form id="articlesInsert">
+		Name: <input type="text" name="name2" required>
+		Date: <input type="text" name="date">
+		<input type="submit">
+	</form>
+	<hr>
+	<br>
+	<form id="docsInsert">
+		Label: <input type="text" name="label2" required>
+		Date: <input type="text" name="date">
+		Body: <textarea name="body" id="" cols="30" rows="10"></textarea>
+		<input type="submit">
+	</form>
+</template>
+
+<template name="Resume">
+	<div class="content">
+		<h1>Curriculum vitae</h1>
+		
+	</div>
+</template>
+
+<template name="Cheatsheets">
+	<div class="content">
+		<h1>Status: </h1>
+		<p>Currently in development process. Please come back later</p>
+		<h2>Ps: </h2>
+		<p>You might want to check out my <a class="anchor" href="/articles">articles</a> for now.</p>
+	</div>
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

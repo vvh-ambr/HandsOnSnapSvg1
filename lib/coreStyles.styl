@@ -1,0 +1,126 @@
+
+*
+	box-sizing border-box
+
+html, body
+	width 100%
+	height 100%
+
+$darkestRed = shade(#d13f19, 20%)
+$darkerRed = mix(#d13f19, rgba(0, 0, 0, 0.5), 20%)
+$red = #d13f19 
+$lighterRed = tint(#d13f19, 30%)
+$lightestRed = tint(#d13f19, 80%)
+
+$browny = #844d49
+
+$creamy = #f5f0ed
+
+
+
+a
+	color $creamy
+	text-decoration none
+	padding-bottom 5px !important
+	&:hover
+		border-bottom 1px solid $creamy
+
+		
+.aside
+	position fixed
+	transition all 0.4s linear
+	height 100%
+	box-shadow 0 2px 4px rgba(0, 0, 0, 0.5)
+	background-color $browny
+	font-size 11px
+	font-family 'Droid Sans', sans-serif
+	>.navigation
+		transition all 0.4s linear
+		height 100%
+		>ul
+			vertically-align()
+			>li		
+				margin-top 20px
+				padding-bottom 10px
+
+				
+
+		
+#container
+	text-align center
+	background-color $creamy
+	height 1000px
+	box-shadow 0 0 5px lighten(black, 65%)
+	font-family 'Droid Sans', sans-serif
+	color $browny
+	>#svgEl
+		height 500px
+		width 100%
+		box-shadow 0 1px 4px $browny
+		>.gOfCircles
+			&:hover
+				cursor pointer
+	>.content
+		>h1
+			h3()
+			margin-left auto
+			margin-right auto
+		>h2
+			h4()
+			margin-top 100px
+			margin-left auto
+			margin-right auto
+		>h3
+			h5()
+			text-align center
+		>p
+			color darken(dimgrey, 45%)
+			paragraph 15px true
+	>.article
+		display block
+		height 100px
+		width 100%
+		border 1px solid $browny
+		text-align center
+		&:hover
+			background-color lighten($creamy, 30%)			
+		.wrap
+			margin-top 20px
+			>.l
+				font-weight 400
+				color $browny
+				font-size 24px
+			>h2
+				margin-top 10px
+				font-size 11px
+			>h3
+				margin-top 16px
+				color grey
+				font-size 10px		
+			
+	
+.anchor
+	color $browny 
+	font-weight bold
+	text-decoration underline
+	
+					
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
